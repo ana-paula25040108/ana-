@@ -3,7 +3,45 @@
 <head>
     <title>CineMagic - Seu Guia de Filmes</title>
     <link rel="stylesheet" href="styles.css">
-</head>
+</head>body {
+    background-color: #002766; /* Azul escuro */
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    text-align: center;
+    color: #fff;
+}
+
+h1 {
+    color: #ffcc00; /* Dourado */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Bexigas (utilizando pseudo-elementos e animação CSS) */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('bexigas.png') no-repeat;
+    background-size: cover;
+    z-index: -1;
+    animation: float 5s infinite linear;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100px);
+    }
+}
+
+/* E outros estilos para as diferentes seções do site */
 <body>
     <header>
         <h1>CineMagic</h1>
